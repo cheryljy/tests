@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title> Practice3 - html</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+  <h1>Object 배우기 </h1>
+    <h2>Object의 생성</h2>
+      <script>
+      var jobs = {
+        "programmer" : "둘리",
+        "designer" : "떵이",
+        "planner" : "셰릴"
+      };
+      document.write(jobs.programmer+"<br>");
+      document.write(jobs.designer+"<br>");
+      document.write(jobs.planner+"<br>");
+      </script>
+    <h2>Object 순환</h2>
+      <script>
+      for (var key in jobs) {
+        document.write(key + " : " + jobs[key]+"<br>");
+      }
+      </script>
+    <h2>Method와 Property</h2>
+      <script>
+      jobs.ShowAll = function() {
+        for (var key in this) {
+          document.write(key + " : " + this[key]+"<br>");
+        }
+      }
+      jobs.ShowAll();
+      </script>
+  </body>
+</html>
