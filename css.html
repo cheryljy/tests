@@ -7,12 +7,18 @@
 	</head>
 	<body>
 		<a href=index.html><h1>WEB</h1></a>
-		<input type="button" value="야간모드" onclick="
-		document.querySelector('body').style.backgroundColor ='black';
-		document.querySelector('body').style.color = 'white';">
-		<input type="button" value="주간모드" onclick="
-		document.querySelector('body').style.backgroundColor ='white';
-		document.querySelector('body').style.color = 'black';">
+		<input id="light_mod" type="button" value="야간모드 전환" onclick="
+	  if (document.querySelector('#light_mod').value === '야간모드 전환') {
+			document.querySelector('body').style.backgroundColor ='black';
+			document.querySelector('body').style.color = 'white';
+			document.querySelector('#light_mod').value = '주간모드 전환';
+		}
+		else {
+			document.querySelector('body').style.backgroundColor ='white';
+			document.querySelector('body').style.color = 'black';
+			document.querySelector('#light_mod').value = '야간모드 전환';
+		}
+		">
 		<div id="grid">
 				<ol>
 					<li><a href=html.html>HTML</a></li>
