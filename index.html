@@ -8,15 +8,28 @@
 <body>
 	<a href=index.html><h1>WEB</h1></a>
 	<input id="light_mod" type="button" value="야간모드 전환" onclick="
-  if (document.querySelector('#light_mod').value === '야간모드 전환') {
-		document.querySelector('body').style.backgroundColor ='black';
-		document.querySelector('body').style.color = 'white';
-		document.querySelector('#light_mod').value = '주간모드 전환';
+	var target = document.querySelector('body');
+	if (this.value === '야간모드 전환') {
+		target.style.backgroundColor ='black';
+		target.style.color = 'white';
+		this.value = '주간모드 전환';
+	var alist = document.querySelectorAll('a');
+	var i = 0;
+	while ( i < alist.length) {
+		alist[i].style.color = 'pink';
+		i = i + 1 ;
+	}
 	}
 	else {
-		document.querySelector('body').style.backgroundColor ='white';
-		document.querySelector('body').style.color = 'black';
-		document.querySelector('#light_mod').value = '야간모드 전환';
+		target.style.backgroundColor ='white';
+		target.style.color = 'black';
+		this.value = '야간모드 전환';
+		var alist = document.querySelectorAll('a');
+		var i = 0;
+		while ( i < alist.length) {
+			alist[i].style.color = 'green';
+			i = i + 1 ;
+		}
 	}
 	">
 	<div id="grid">
